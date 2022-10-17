@@ -13,6 +13,7 @@ const login = (req, res) => {
                 if (example_data.results[i].login.username == username && example_data.results[i].login.password == password) {
 
                     // console.log("login successful");
+                     delete example_data.results[i].login;
                     res.status(200).send(example_data.results[i]);
                     break;
                 }
